@@ -1,0 +1,19 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/sparklr_2.11-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/RunOn.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/main/RunOn.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/RunOn$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/main/RunOn$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RunOnSpark$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/RunOnSpark$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/RunOn$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/main/RunOn$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/RunOn$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/main/RunOn$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/RunOn$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/main/RunOn$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RunOnSpark.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sulabhk/IdeaProjects/sparkLr/target/scala-2.11/classes/RunOnSpark.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

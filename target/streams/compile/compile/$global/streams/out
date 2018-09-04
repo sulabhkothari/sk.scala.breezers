@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/sulabhk/IdeaProjects/sparkLr/src/main/scala/Main.scala:3:12: object periscope is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.periscope.price.client2.scorecardadaptor.queue.{QueueClient, QueueConfig}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

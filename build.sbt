@@ -21,10 +21,11 @@ libraryDependencies ++= Seq(
   "org.scalanlp" %% "breeze-natives" % "0.12",
   // the visualization library is distributed separately as well.
   // It depends on LGPL code.
-  "org.scalanlp" %% "breeze-viz" % "0.12"
+  "org.scalanlp" %% "breeze-viz" % "0.12",
   //"org.apache.hadoop" %% "hadoop-core" % "1.2.0",
   //"org.apache.hive" %% "hive-exec" % "0.14.0"
   //,"com.datastax.spark" %% "spark-cassandra-connector" % "1.0.0"
+  "co.theasi" %% "plotly" % "0.2.0"
 )
 
 resolvers ++= Seq(

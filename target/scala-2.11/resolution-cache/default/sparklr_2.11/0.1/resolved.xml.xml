@@ -4,7 +4,7 @@
 		module="sparklr_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20180905225536"
+		publication="20180906160340"
 	>
 		<description>
 		sparkLr
@@ -42,5 +42,7 @@
 		<dependency org="org.scalanlp" name="breeze-natives_2.11" rev="0.12" conf="compile->default(compile)"/>
 		<dependency org="org.scalanlp" name="breeze-viz_2.11" rev="0.12" conf="compile->default(compile)"/>
 		<dependency org="co.theasi" name="plotly_2.11" rev="0.2.0" conf="compile->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.2.2" conf="compile->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.module" name="jackson-module-scala_2.11" rev="2.2.2" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

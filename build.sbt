@@ -25,7 +25,9 @@ libraryDependencies ++= Seq(
   //"org.apache.hadoop" %% "hadoop-core" % "1.2.0",
   //"org.apache.hive" %% "hive-exec" % "0.14.0"
   //,"com.datastax.spark" %% "spark-cassandra-connector" % "1.0.0"
-  "co.theasi" %% "plotly" % "0.2.0"
+  "co.theasi" %% "plotly" % "0.2.0",
+  "com.fasterxml.jackson.core" % "jackson-databind" % "2.2.2",
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.2.2"
 )
 
 resolvers ++= Seq(

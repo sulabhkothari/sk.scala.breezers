@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03172b1d-3d3a-446d-82c4-40ca5605927b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$3$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$4$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$5$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$5$$anonfun$apply$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$6$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$6$$anonfun$apply$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$isConverged$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$$anonfun$isConverged$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$Line$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$Line.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$Plane$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression$Plane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LinearRegression.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -28,24 +53,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
-          <entry key="scala" value="9" />
+          <entry key="class" value="2" />
+          <entry key="scala" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="Scala" value="9" />
+          <entry key="CLASS" value="2" />
+          <entry key="Scala" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="scala" value="1847" />
+          <entry key="scala" value="3553" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Scala" value="1847" />
+          <entry key="Scala" value="3553" />
         </counts>
       </usages-collector>
     </session>
@@ -53,28 +78,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/JacksonUsage.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetwork.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="391">
+              <caret line="112" column="34" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="34" />
               <folding>
                 <element signature="e#22#92#0" expanded="true" />
                 <element signature="e#371#421#0" />
@@ -82,11 +89,70 @@
                 <element signature="e#902#2222#0" />
                 <element signature="e#975#1052#0" />
                 <element signature="e#1493#1577#0" />
-                <element signature="e#3070#4129#0" />
-                <element signature="e#3754#3848#0" />
-                <element signature="e#5437#5730#0" />
-                <element signature="e#4946#5191#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding>
+                <element signature="e#22#72#0" expanded="true" />
+                <element signature="e#1221#2278#0" />
+                <element signature="e#1908#2002#0" />
+                <element signature="e#2338#3153#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar!/breeze/linalg/BroadcastedColumns.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+              <folding>
+                <element signature="e#22#72#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/numerics/package.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="649" column="9" selection-start-line="649" selection-start-column="9" selection-end-line="649" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/generic/UFunc.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/optimize/DiffFunction.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -96,24 +162,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
               <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar!/breeze/linalg/DenseMatrix.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="94" selection-start-line="2" selection-start-column="94" selection-end-line="2" selection-end-column="94" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/collection/TraversableLike.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -130,26 +178,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/Broadcasted.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="169">
               <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/package.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/collection/immutable/List.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="449" column="17" selection-start-line="449" selection-start-column="17" selection-end-line="449" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -172,6 +202,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala" />
       </list>
     </option>
   </component>
@@ -226,7 +258,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547542482694" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548096830953" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -240,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LogisticRegression">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -249,6 +281,20 @@
     </configuration>
     <configuration name="LinearRegression" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="sk.breeze.ml.LinearRegression" />
+      <module name="sparkLr" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sk.breeze.ml.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogisticRegression" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sk.breeze.ml.LogisticRegression" />
       <module name="sparkLr" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -290,8 +336,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.LinearRegression" />
+      <item itemvalue="Application.LogisticRegression" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LogisticRegression" />
         <item itemvalue="Application.LinearRegression" />
       </list>
     </recent_temporary>
@@ -355,10 +406,10 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" weight="0.3120482" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
@@ -410,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/Broadcasted.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/collection/TraversableLike.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -445,10 +489,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar!/breeze/linalg/BroadcastedColumns.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#22#72#0" expanded="true" />
+            <element signature="e#1221#2278#0" />
+            <element signature="e#1908#2002#0" />
+            <element signature="e#2338#3153#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
+        <state relative-caret-position="391">
+          <caret line="112" column="34" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="34" />
           <folding>
             <element signature="e#22#92#0" expanded="true" />
             <element signature="e#371#421#0" />
@@ -456,10 +520,44 @@
             <element signature="e#902#2222#0" />
             <element signature="e#975#1052#0" />
             <element signature="e#1493#1577#0" />
-            <element signature="e#3070#4129#0" />
-            <element signature="e#3754#3848#0" />
-            <element signature="e#5437#5730#0" />
-            <element signature="e#4946#5191#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/Broadcasted.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/optimize/DiffFunction.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/generic/UFunc.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/numerics/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="649" column="9" selection-start-line="649" selection-start-column="9" selection-end-line="649" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#22#72#0" expanded="true" />
           </folding>
         </state>
       </provider>

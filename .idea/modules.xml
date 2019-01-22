@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sk-scala-breezers-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sk-scala-breezers-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparkLr.iml" filepath="$PROJECT_DIR$/.idea/modules/sparkLr.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sparklr-build.iml" filepath="$PROJECT_DIR$/.idea/modules/sparklr-build.iml" />
     </modules>
   </component>
 </project>

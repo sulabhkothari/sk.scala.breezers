@@ -17,9 +17,10 @@ object LogisticRegression {
     println(theta)
     println(sigmoid(theta))
     //println(trainingData(*,0 to 1))
+    println(x*theta)
 
-    //val result = (hTheta(theta, x) - y).t * x
-    //println(theta - result.t)
+    val result = (hTheta(theta, x) - y).t * x
+    println(theta - result.t)
   }
 
   //−1/m[∑(i=1m)y(i)log(hθ(x(i)))+(1−y(i))log(1−hθ(x(i)))]
@@ -31,7 +32,7 @@ object LogisticRegression {
 //  }
 
   def hTheta(theta: DenseVector[Double], x: DenseMatrix[Double]) = {
-    sigmoid(theta.t*x)
+    sigmoid(x*theta)
   }
 
   def prepareClassificationSample(dataSize: Int): DenseMatrix[Double] = {

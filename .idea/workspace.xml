@@ -192,9 +192,9 @@
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../playnow" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../playwithscala1.0" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../scala.play" value="PREVIEW" />
+        <entry key="$USER_HOME$/playnow" value="PREVIEW" />
+        <entry key="$USER_HOME$/playwithscala1.0" value="PREVIEW" />
+        <entry key="$USER_HOME$/scala.play" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -258,7 +258,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548096830953" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

@@ -22,6 +22,8 @@ object LogisticRegression {
     println(theta - result.t)
   }
 
+  //−1/m[∑(i=1m)y(i)log(hθ(x(i)))+(1−y(i))log(1−hθ(x(i)))]
+
 //  val f = (x:DenseMatrix[Double], y:DenseVector[Double]) => new DiffFunction[DenseVector[Double]] {
 //    def calculate(theta: DenseVector[Double]) = {
 //      (hTheta(theta, x) - y).t * x

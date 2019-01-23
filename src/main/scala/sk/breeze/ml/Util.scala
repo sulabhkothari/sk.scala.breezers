@@ -112,18 +112,18 @@ object Util {
 
   def plotXY(xy: DenseMatrix[Double]): Unit = {
     val xyPositives = for {
-      i <- 0 to xy.rows - 1 if (xy(i, *).underlying(2) == 1.0)
+      i <- 0 to xy.rows - 1 if (xy(i, *).underlying(3) > 0.5)
     }
       yield xy(i, *)
 
-    val dm1 = DenseMatrix.tabulate[Double](xyPositives.length, 2)((i, j) => xyPositives(i).underlying(j))
+    val dm1 = DenseMatrix.tabulate[Double](xyPositives.length, 2)((i, j) => xyPositives(i).underlying(j+1))
 
 
     val xyNegatives = for {
-      i <- 0 to xy.rows - 1 if (xy(i, *).underlying(2) != 1.0)
+      i <- 0 to xy.rows - 1 if (xy(i, *).underlying(3) < 0.5)
     }
       yield xy(i, *)
-    val dm2 = DenseMatrix.tabulate[Double](xyNegatives.length, 2)((i, j) => xyNegatives(i).underlying(j))
+    val dm2 = DenseMatrix.tabulate[Double](xyNegatives.length, 2)((i, j) => xyNegatives(i).underlying(j+1))
 
     val f = Figure()
     val p = f.subplot(0)

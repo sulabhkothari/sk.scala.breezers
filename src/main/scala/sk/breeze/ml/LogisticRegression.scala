@@ -4,6 +4,7 @@ import breeze.linalg.{*, DenseMatrix, DenseVector, sum}
 import breeze.numerics.{log, sigmoid}
 import breeze.optimize.{DiffFunction, LBFGS}
 import breeze.plot.plot
+import sk.breeze.ml.Util.{isConverged, prependOnesColumn}
 
 object LogisticRegression {
 
@@ -16,7 +17,7 @@ object LogisticRegression {
     lazy val posOnes = DenseVector.ones[Double](yPos.length)
     lazy val negOnes = DenseVector.ones[Double](yNeg.length)
 
-    private def trainingData = DenseMatrix.vertcat(trainingDataPos, trainingDataNeg)
+    lazy val trainingData = DenseMatrix.vertcat(trainingDataPos, trainingDataNeg)
 
     def x = trainingData(*, 0 to trainingData.cols - 2).underlying
 
@@ -29,19 +30,31 @@ object LogisticRegression {
   }
 
   def main(args: Array[String]): Unit = {
-    val (trainingDataPos, trainingDataNeg) = prepareClassificationSample(10)
+    val (trainingDataPos, trainingDataNeg) = prepareTrainingData(10000)
     val trainingData = TrainingData(trainingDataNeg, trainingDataPos)
+    Util.plotXY(trainingData.trainingData)
+    scala.io.StdIn.readLine()
     //Util.plotXY(trainingData)
     val lbfgs = new LBFGS[DenseVector[Double]](maxIter = 10000, m = 4)
-    println(lbfgs.minimize(f(trainingData), trainingData.randomTheta))
-    println("--->"+trainingData.randomTheta)
-
-    println(lbfgs.minimize(f(trainingData), trainingData.randomTheta))
-    println(f(trainingData).valueAt(lbfgs.minimize(f(trainingData), trainingData.randomTheta)))
+    val minTheta = lbfgs.minimize(f(trainingData), trainingData.randomTheta)
+    val minThetaGd = gradientDescent(trainingData)
+    println(trainingData.randomTheta)
+    println(minTheta)
+    println(minThetaGd)
+    println(hTheta(minThetaGd, DenseVector(1, 6000, 6000)))
+    println(hTheta(minThetaGd, DenseVector(1, -6000, -6000)))
+    val newData = prepareClassificationData(5)
+    val y = sigmoid(newData * minThetaGd)
+    val plotData = DenseMatrix.create(newData.rows, newData.cols + 1, newData.data ++ y.data)
+    println(plotData)
+    Util.plotXY(plotData)
 
   }
 
   //−1/m[∑(i=1m)y(i)log(hθ(x(i)))+(1−y(i))log(1−hθ(x(i)))]
+  def hTheta(theta: DenseVector[Double], x: DenseVector[Double]) = {
+    sigmoid(theta.t * x)
+  }
 
   val f = (td: TrainingData) => new DiffFunction[DenseVector[Double]] {
     def calculate(theta: DenseVector[Double]) = {
@@ -50,27 +63,53 @@ object LogisticRegression {
   }
 
   def cost(td: TrainingData, theta: DenseVector[Double]) = {
-    sum(log(sigmoid(td.xPos*theta))) + sum(log(td.negOnes - sigmoid(td.xNeg * theta)))
+    sum(-log(sigmoid(td.xPos * theta))) + sum(-log(td.negOnes - sigmoid(td.xNeg * theta)))
   }
 
   def gradient(td: TrainingData, theta: DenseVector[Double]) = {
     ((sigmoid(td.x * theta) - td.y).t * td.x).t
   }
 
-  def prepareClassificationSample(dataSize: Int): (DenseMatrix[Double], DenseMatrix[Double]) = {
+  def gradientDescent(td: TrainingData): DenseVector[Double] = {
+    var theta = DenseVector.zeros[Double](td.randomTheta.length)
+    var thetaTemp = td.randomTheta
+    val count: Double = td.trainingData.rows
+    val alpha: Double = 0.05 / count
+    val precision = 0.000001 // count
+
+    while (!isConverged(theta, thetaTemp, precision)) {
+      theta = thetaTemp
+      val diff = gradient(td, theta)
+      println("==>" + thetaTemp)
+      thetaTemp = theta - (diff :* alpha :/ (2 * count))
+    }
+    thetaTemp
+  }
+
+  def prepareTrainingData(dataSize: Int): (DenseMatrix[Double], DenseMatrix[Double]) = {
     val rg = new scala.util.Random
     (
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
         j match {
           case 0 => i
-          case 1 => i * rg.nextDouble()
+          case 1 => i * rg.nextDouble
           case 2 => 1
         })),
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
         j match {
           case 0 => i - dataSize.asInstanceOf[Double] / 2
-          case 1 => (i - dataSize.asInstanceOf[Double] / 2) * rg.nextDouble()
+          case 1 => (i - dataSize.asInstanceOf[Double] / 2) * rg.nextDouble
           case 2 => if (i - dataSize.asInstanceOf[Double] / 2 < 0) 0 else 1
         })))
+  }
+
+  def prepareClassificationData(dataSize: Double): DenseMatrix[Double] = {
+    val points = for{
+      x <- -dataSize to dataSize by 0.1
+      y <- -dataSize to dataSize by 0.1
+    }
+      yield (x,y)
+
+    prependOnesColumn(DenseMatrix(points:_*))
   }
 }

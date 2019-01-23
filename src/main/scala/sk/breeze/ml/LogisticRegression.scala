@@ -2,7 +2,7 @@ package sk.breeze.ml
 
 import breeze.linalg.{*, DenseMatrix, DenseVector, sum}
 import breeze.numerics.{log, sigmoid}
-import breeze.optimize.{DiffFunction, LBFGS}
+import breeze.optimize.{DiffFunction, LBFGS, LBFGSB}
 import breeze.plot.plot
 import sk.breeze.ml.Util.{isConverged, prependOnesColumn}
 
@@ -30,24 +30,31 @@ object LogisticRegression {
   }
 
   def main(args: Array[String]): Unit = {
-    val (trainingDataPos, trainingDataNeg) = prepareTrainingData(10000)
+    val (trainingDataPos, trainingDataNeg) = prepareTrainingData(1000)
     val trainingData = TrainingData(trainingDataNeg, trainingDataPos)
-    Util.plotXY(trainingData.trainingData)
-    scala.io.StdIn.readLine()
+    //Util.plotXY(trainingData.trainingData)
+    //scala.io.StdIn.readLine()
     //Util.plotXY(trainingData)
     val lbfgs = new LBFGS[DenseVector[Double]](maxIter = 10000, m = 4)
-    val minTheta = lbfgs.minimize(f(trainingData), trainingData.randomTheta)
+    val state = lbfgs.minimizeAndReturnState(f(trainingData), trainingData.randomTheta)
+    val cs = lbfgs.convergenceCheck(state,state.convergenceInfo)
+    println(cs.get.reason)
     val minThetaGd = gradientDescent(trainingData)
     println(trainingData.randomTheta)
-    println(minTheta)
+    println(state.x)
     println(minThetaGd)
+//
     println(hTheta(minThetaGd, DenseVector(1, 6000, 6000)))
     println(hTheta(minThetaGd, DenseVector(1, -6000, -6000)))
+
+    println(hTheta(state.x, DenseVector(1, 6000, 6000)))
+    println(hTheta(state.x, DenseVector(1, -6000, -6000)))
+
     val newData = prepareClassificationData(5)
     val y = sigmoid(newData * minThetaGd)
     val plotData = DenseMatrix.create(newData.rows, newData.cols + 1, newData.data ++ y.data)
-    println(plotData)
-    Util.plotXY(plotData)
+    //println(plotData)
+    //Util.plotXY(plotData)
 
   }
 
@@ -80,7 +87,7 @@ object LogisticRegression {
     while (!isConverged(theta, thetaTemp, precision)) {
       theta = thetaTemp
       val diff = gradient(td, theta)
-      println("==>" + thetaTemp)
+      //println("==>" + thetaTemp)
       thetaTemp = theta - (diff :* alpha :/ (2 * count))
     }
     thetaTemp
@@ -92,13 +99,13 @@ object LogisticRegression {
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
         j match {
           case 0 => i
-          case 1 => i * rg.nextDouble
+          case 1 => i * rg.nextDouble + 200.99
           case 2 => 1
         })),
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
         j match {
           case 0 => i - dataSize.asInstanceOf[Double] / 2
-          case 1 => (i - dataSize.asInstanceOf[Double] / 2) * rg.nextDouble
+          case 1 => (i - dataSize.asInstanceOf[Double] / 2) * rg.nextDouble + 48.49
           case 2 => if (i - dataSize.asInstanceOf[Double] / 2 < 0) 0 else 1
         })))
   }

@@ -131,4 +131,9 @@ object Util {
     p += plot(dm2(*, 0).underlying, dm2(*, 1).underlying, '+')
 
   }
+
+  def randomVector(size:Int) = {
+    val normal01 = breeze.stats.distributions.Gaussian(0, 1)
+    DenseVector.rand(size, normal01)
+  }
 }

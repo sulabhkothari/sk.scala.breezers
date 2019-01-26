@@ -2,7 +2,7 @@ package sk.breeze.ml
 
 import breeze.linalg.{*, DenseMatrix, DenseVector, sum}
 import breeze.numerics.{log, sigmoid}
-import breeze.optimize.{DiffFunction, LBFGS, LBFGSB}
+import breeze.optimize._
 import breeze.plot.plot
 import sk.breeze.ml.Util.{isConverged, prependOnesColumn}
 
@@ -39,13 +39,23 @@ object LogisticRegression {
     val state = lbfgs.minimizeAndReturnState(f(trainingData), trainingData.randomTheta)
     val cs = lbfgs.convergenceCheck(state,state.convergenceInfo)
     println(cs.get.reason)
+
+    val gd = StochasticGradientDescent[DenseVector[Double]]()
+    val state1 = gd.minimizeAndReturnState(f(trainingData), trainingData.randomTheta)
+    val cs1 = gd.convergenceCheck(state1,state1.convergenceInfo)
+    println(":::::::::::::::::>"+cs1.get.reason)
+    println("=================>"+state1.x)
+
     val minThetaGd = gradientDescent(trainingData)
     println(trainingData.randomTheta)
     println(state.x)
-    println(minThetaGd)
+    println("---------------->"+minThetaGd)
 //
     println(hTheta(minThetaGd, DenseVector(1, 6000, 6000)))
     println(hTheta(minThetaGd, DenseVector(1, -6000, -6000)))
+
+    println(hTheta(state1.x, DenseVector(1, 6000, 6000)))
+    println(hTheta(state1.x, DenseVector(1, -6000, -6000)))
 
     println(hTheta(state.x, DenseVector(1, 6000, 6000)))
     println(hTheta(state.x, DenseVector(1, -6000, -6000)))

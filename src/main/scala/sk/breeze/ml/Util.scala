@@ -5,6 +5,11 @@ import breeze.plot.{Figure, plot}
 
 object Util {
 
+  def randomVector(size:Int) = {
+    val normal01 = breeze.stats.distributions.Gaussian(0, 1)
+    DenseVector.rand(size, normal01)
+  }
+
   case class Line(slope: Double, c: Double)
 
   case class Plane(a: Double, b: Double, c: Double)

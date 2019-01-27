@@ -150,6 +150,7 @@ object Util {
     p += plot(dm1(*, 0).underlying, dm1(*, 1).underlying, '.')
     p += plot(dm2(*, 0).underlying, dm2(*, 1).underlying, '+')
 
+
   }
 
   def randomVector(size:Int) = {
@@ -163,7 +164,7 @@ object Util {
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
         j match {
           case 0 => i
-          case 1 => i * rg.nextDouble + 200.99
+          case 1 => i*rg.nextDouble + 200.99
           case 2 => 1
         })),
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
@@ -174,10 +175,27 @@ object Util {
         })))
   }
 
+  def prepareTrainingData(dataSize: Int, pos:Double, neg:Double): (DenseMatrix[Double], DenseMatrix[Double]) = {
+    val rg = new scala.util.Random
+    (
+      Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
+        j match {
+          case 0 => i
+          case 1 => i * rg.nextDouble + 200.99
+          case 2 => pos
+        })),
+      Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
+        j match {
+          case 0 => i - dataSize.asInstanceOf[Double] / 2
+          case 1 => (i - dataSize.asInstanceOf[Double] / 2) * rg.nextDouble + 48.49
+          case 2 => if (i - dataSize.asInstanceOf[Double] / 2 < 0) neg else pos
+        })))
+  }
+
   def prepareClassificationData(dataSize: Double): DenseMatrix[Double] = {
     val points = for{
-      x <- -dataSize to dataSize by 0.1
-      y <- -dataSize to dataSize by 0.1
+      x <- -dataSize to dataSize by 200
+      y <- -dataSize to dataSize by 200
     }
       yield (x,y)
 

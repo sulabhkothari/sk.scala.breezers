@@ -2,7 +2,6 @@ package sk.breeze.ml
 
 import breeze.linalg.{DenseVector, norm, sum}
 import breeze.optimize.{DiffFunction, LBFGS}
-import sk.breeze.ml.LogisticRegression.{TrainingData, cost, f, gradient}
 
 object ConvexOptimization {
   def main(args: Array[String]): Unit = {

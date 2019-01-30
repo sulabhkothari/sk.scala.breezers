@@ -1,8 +1,9 @@
 package sk.breeze.ml
 
 import breeze.linalg.{*, DenseMatrix, DenseVector}
-import breeze.numerics.sigmoid
-import sk.breeze.ml.Util.TrainingData
+import breeze.numerics.{abs, sigmoid}
+import breeze.optimize.StochasticGradientDescent
+import sk.breeze.ml.Util.{TrainingData, isConverged, prependOnesColumn}
 
 import scala.collection.mutable
 import scala.collection.mutable.ArraySeq
@@ -10,10 +11,19 @@ import scala.collection.mutable.ArraySeq
 object NeuralNetwork {
   def main(args: Array[String]): Unit = {
     val nn = NeuralNetwork(2, Seq(4, 5, 3), 1)
-    val (pos, neg) = Util.prepareTrainingDataNoBias(100)
+    val (pos, neg) = Util.prepareTrainingDataNoBias(1000)
+    println("DG")
     val td = TrainingData(pos, neg)
-    println(nn.classify(td.x))
-    nn.backPropagation(td.x, DenseMatrix.create(td.y.length, 1, td.y.data))
+    while(!nn.backPropagation(td.x, DenseMatrix.create(td.y.length, 1, td.y.data))){
+      //println(nn.weights(0))
+    }
+    val trainingData = Util.prependOnesColumn(td.trainingData)
+    //Util.plotXY(trainingData)
+    //scala.io.StdIn.readLine()
+    val input = Util.prepareClassificationDataNoBias(10000)
+    val output = nn.classify(input)
+    val graphableInput = Util.prependOnesColumn(input)
+    //Util.plotXY(DenseMatrix.create(graphableInput.rows,graphableInput.cols+1,graphableInput.data ++ output.data))
   }
 
   def tuplize(seq: Seq[Int]) = {
@@ -30,15 +40,14 @@ object NeuralNetwork {
     val weightsArr = for ((row, col) <- tuplize(Seq(inputCount) ++ layerWiseNeuronCount ++ Seq(outputCount)))
       yield DenseMatrix.rand[Double](row + 1, col)
 
-    new NeuralNetwork(weightsArr)
+    new NeuralNetwork(weightsArr,1,12.5)
   }
 }
 
-class NeuralNetwork private(weights: Seq[DenseMatrix[Double]]) {
+class NeuralNetwork private(var weights: Seq[DenseMatrix[Double]], learningRate:Double, convergencePrecision:Double) {
 
   def classify(input: DenseMatrix[Double]) = {
     weights.foldLeft(input)((x, w) => {
-      println(s"${x.rows}x${x.cols + 1}......${w.rows},${w.cols}")
       sigmoid(Util.prependOnesColumn(x) * w)
     })
   }
@@ -46,7 +55,6 @@ class NeuralNetwork private(weights: Seq[DenseMatrix[Double]]) {
   private def forwardPropagation(input: DenseMatrix[Double]) = {
     var activationQueue: mutable.Queue[DenseMatrix[Double]] = new mutable.Queue[DenseMatrix[Double]]()
     val actual = weights.foldLeft(input)((x, w) => {
-      println(s"${x.rows}x${x.cols + 1}......${w.rows},${w.cols}")
       val a = sigmoid(Util.prependOnesColumn(x) * w)
       activationQueue.enqueue(a)
       a
@@ -57,32 +65,50 @@ class NeuralNetwork private(weights: Seq[DenseMatrix[Double]]) {
   private def calculateDeltas(activations: Array[DenseMatrix[Double]], y: DenseMatrix[Double]) = {
     val newActivations = activations.take(activations.length - 1)
     val newWeights = weights.drop(1)
-    val deltaf = activations(activations.length - 1) - y
+    val activationf = activations(activations.length - 1)
+    val deltaf = (activationf - y) :* (activationf :* (DenseMatrix.ones[Double](activationf.rows, activationf.cols) - activationf))
     val queueOfDelta = mutable.Queue(deltaf)
     (newActivations, newWeights).zipped.foldRight(deltaf)((wa, d) => {
-      println(s"ACT: ${wa._1.rows}x${wa._1.cols}")
-      println(s"WEI: ${wa._2.rows}x${wa._2.cols}")
-      println(s"DEL: ${d.rows}x${d.cols}")
       val mat = d * wa._2.t
-      //println(mat(*, 1 to mat.cols-1))
-      val nextDelta = mat(*, 1 to mat.cols-1).underlying :* (wa._1 :* (DenseMatrix.ones[Double](wa._1.rows, wa._1.cols) - wa._1))
+      val nextDelta = mat(*, 1 to mat.cols - 1).underlying :* (wa._1 :* (DenseMatrix.ones[Double](wa._1.rows, wa._1.cols) - wa._1))
       queueOfDelta.enqueue(nextDelta)
       nextDelta
-      //deltaf
     })
-    queueOfDelta.toArray.reverse.foreach(x=> println(s"Dim: ${x.rows}x${x.cols}"))
     queueOfDelta.toArray.reverse
   }
 
-  def backPropagation(input: DenseMatrix[Double], expectedOutput: DenseMatrix[Double]) = {
-    val activations = forwardPropagation(input)
-    //activations.foreach(x => println(s"ACTIVATIONS: ${x.rows}x${x.cols}"))
-    val deltas = calculateDeltas(activations, expectedOutput)
-    println(deltas(2).t * activations(1))
+  private def getSameDimMat(mat:DenseMatrix[Double], value:Double) = {
+    DenseMatrix.tabulate[Double](mat.rows, mat.cols)((_,_) => value)
+  }
 
-    println(s"\n\n\n D - ${deltas(1).rows}x${deltas(1).cols}\nA - ${activations(0).rows}x${activations(0).cols}")
-    println(s"${weights(0).rows}x${weights(0).cols}")
-    println(weights.length)
+  def backPropagation(input: DenseMatrix[Double], expectedOutput: DenseMatrix[Double]):Boolean = {
+    val activations = forwardPropagation(input)
+    val deltas = calculateDeltas(activations, expectedOutput)
+    val gradient = (Seq(input) ++ activations, deltas).zipped.map((activation, delta) => {
+      val del = delta.t * activation
+      val biasColumn = DenseMatrix.ones[Double](1,delta.rows) * delta
+      val gradDelta = DenseMatrix.create(del.rows,del.cols+1, biasColumn.data ++ del.data).t
+      getSameDimMat(gradDelta, (1/input.rows)) :* gradDelta
+    })
+//println(weights(3))
+    //println(gradient(3))
+
+    //println("=============")
+    val newWeights = (weights, gradient).zipped.map((w,g) => w :- (getSameDimMat(g,learningRate) :* g))
+//println(newWeights(0))
+    //scala.io.StdIn.readLine()
+    val isConverged = hasConverged(weights,newWeights)
+    weights = newWeights
+    isConverged
+  }
+
+  private def hasConverged(w1:Seq[DenseMatrix[Double]], w2:Seq[DenseMatrix[Double]]) = {
+    println("_____"+(w1,w2).zipped.map((x,y)=> (x - y).data.map(math.abs(_)).sum).sum)
+    (w1,w2).zipped.map((x,y)=> (x - y).data.map(math.abs(_)).sum).sum <= convergencePrecision
+  }
+
+  private def gradientSum(g:Seq[DenseMatrix[Double]]) = {
+    g.map(_.data.map(math.abs).sum).sum
   }
 
   //private val layerWiseWeightArray:Seq[DenseMatrix[Double]]

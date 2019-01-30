@@ -4,6 +4,7 @@ import breeze.linalg.{*, DenseMatrix, DenseVector}
 import breeze.plot.{Figure, plot}
 
 object Util {
+
   case class TrainingData(trainingDataPos: DenseMatrix[Double], trainingDataNeg: DenseMatrix[Double]) {
     val xPos = trainingDataPos(*, 0 to trainingDataPos.cols - 2).underlying
     val yPos = trainingDataPos(*, trainingDataPos.cols - 1).underlying
@@ -30,6 +31,12 @@ object Util {
   case class Plane(a: Double, b: Double, c: Double)
 
   def prependOnesColumn(original: DenseMatrix[Double]): DenseMatrix[Double] = {
+    val ones = DenseVector.ones[Double](original.rows)
+    val dataWithOnes = ones.data ++ original.data
+    DenseMatrix.create(original.rows, original.cols + 1, dataWithOnes)
+  }
+
+  def prependOnesRow(original: DenseMatrix[Double]): DenseMatrix[Double] = {
     val ones = DenseVector.ones[Double](original.rows)
     val dataWithOnes = ones.data ++ original.data
     DenseMatrix.create(original.rows, original.cols + 1, dataWithOnes)
@@ -136,14 +143,14 @@ object Util {
     }
       yield xy(i, *)
 
-    val dm1 = DenseMatrix.tabulate[Double](xyPositives.length, 2)((i, j) => xyPositives(i).underlying(j+1))
+    val dm1 = DenseMatrix.tabulate[Double](xyPositives.length, 2)((i, j) => xyPositives(i).underlying(j + 1))
 
 
     val xyNegatives = for {
       i <- 0 to xy.rows - 1 if (xy(i, *).underlying(3) < 0.5)
     }
       yield xy(i, *)
-    val dm2 = DenseMatrix.tabulate[Double](xyNegatives.length, 2)((i, j) => xyNegatives(i).underlying(j+1))
+    val dm2 = DenseMatrix.tabulate[Double](xyNegatives.length, 2)((i, j) => xyNegatives(i).underlying(j + 1))
 
     val f = Figure()
     val p = f.subplot(0)
@@ -153,7 +160,7 @@ object Util {
 
   }
 
-  def randomVector(size:Int) = {
+  def randomVector(size: Int) = {
     val normal01 = breeze.stats.distributions.Gaussian(0, 1)
     DenseVector.rand(size, normal01)
   }
@@ -164,7 +171,7 @@ object Util {
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
         j match {
           case 0 => i
-          case 1 => i*rg.nextDouble + 200.99
+          case 1 => i * rg.nextDouble + 200.99
           case 2 => 1
         })),
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
@@ -175,7 +182,25 @@ object Util {
         })))
   }
 
-  def prepareTrainingData(dataSize: Int, pos:Double, neg:Double): (DenseMatrix[Double], DenseMatrix[Double]) = {
+  def prepareTrainingDataNoBias(dataSize: Double): (DenseMatrix[Double], DenseMatrix[Double]) = {
+    val rg = new scala.util.Random
+
+    val posPoints = for {
+      x <- dataSize to 2 * dataSize by 1.9
+      y <- dataSize to 2 * dataSize by 2.9
+    }
+      yield (x * rg.nextDouble() * 10, y * rg.nextDouble() * 10, 1.0)
+
+    val negPoints = for {
+      x <- -dataSize to 0 by 7
+      y <- -dataSize to 0 by 2
+    }
+      yield (x * rg.nextDouble() * 9, y * rg.nextDouble() * 10, 0.0)
+
+    (DenseMatrix(posPoints:_*), DenseMatrix(negPoints:_*))
+  }
+
+  def prepareTrainingData(dataSize: Int, pos: Double, neg: Double): (DenseMatrix[Double], DenseMatrix[Double]) = {
     val rg = new scala.util.Random
     (
       Util.prependOnesColumn(DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
@@ -193,12 +218,22 @@ object Util {
   }
 
   def prepareClassificationData(dataSize: Double): DenseMatrix[Double] = {
-    val points = for{
+    val points = for {
       x <- -dataSize to dataSize by 200
       y <- -dataSize to dataSize by 200
     }
-      yield (x,y)
+      yield (x, y)
 
-    prependOnesColumn(DenseMatrix(points:_*))
+    prependOnesColumn(DenseMatrix(points: _*))
+  }
+
+  def prepareClassificationDataNoBias(dataSize: Double): DenseMatrix[Double] = {
+    val points = for {
+      x <- -dataSize to dataSize by 200
+      y <- -dataSize to dataSize by 200
+    }
+      yield (x, y)
+
+    DenseMatrix(points: _*)
   }
 }

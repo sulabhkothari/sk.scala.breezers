@@ -12,23 +12,11 @@ import scala.collection.mutable.ArraySeq
 object NeuralNetwork {
 
   def main(args: Array[String]): Unit = {
-//    val layerWiseNeuronCount = Seq(2, 3, 1,2)
-//    val weights = DenseVector[Double](Array(1, 1, 1, 1, 1, 0.9, 0.9, 9.9, 0, 8, 0, 8, 0,7,6,7,6))
-//    var w = weights.data
-//    var init = 0
-//    val wei = tuplize(layerWiseNeuronCount)
-//      .map {
-//        case (row, col) =>
-//          println(init)
-//          println(init + (row + 1) * col - 1)
-//          w = weights.slice(init, init + (row + 1) * col).data
-//          println("N")
-//          w.foreach(print)
-//          println("E")
-//          init += (row+1) * col
-//          DenseMatrix.create[Double](row + 1, col, w)
-//      }
+//    val layerWiseNeuronCount = Seq(2, 3, 1, 2)
+//    val weights = DenseVector[Double](Array(1, 1, 1, 1, 1, 0.9, 0.9, 9.9, 0, 8, 0, 8, 0, 7, 6, 7, 6))
+//    val wei = UnpackWeights(layerWiseNeuronCount, weights)
 //    wei.foreach(println)
+//    println(getPackedWeights(wei))
 //    scala.io.StdIn.readLine()
     val (pos, neg) = Util.prepareTrainingDataNoBiasAlt(10000)
     val td = TrainingData(pos, neg)
@@ -124,16 +112,20 @@ object NeuralNetwork {
     new NeuralNetwork(weightsArr, 0.000019, 0.0005)
   }
 
-  private def apply(layerWiseNeuronCount: Seq[Int], weights: DenseVector[Double]): NeuralNetwork = {
+  private def UnpackWeights(layerWiseNeuronCount: Seq[Int], weights: DenseVector[Double]) = {
     var w = weights.data
     var init = 0
-    val weightsArr = tuplize(layerWiseNeuronCount)
+    tuplize(layerWiseNeuronCount)
       .map {
         case (row, col) =>
-          w = weights.data.slice(init, init + (row + 1) * col - 1)
-          init += (row+1) * col
+          w = weights.data.slice(init, init + (row + 1) * col)
+          init += (row + 1) * col
           DenseMatrix.create[Double](row + 1, col, w)
       }
+  }
+
+  private def apply(layerWiseNeuronCount: Seq[Int], weights: DenseVector[Double]): NeuralNetwork = {
+    val weightsArr = UnpackWeights(layerWiseNeuronCount, weights)
 
     new NeuralNetwork(weightsArr, 0.000019, 0.0005)
   }

@@ -11,20 +11,25 @@ import scala.collection.mutable.ArraySeq
 
 object NeuralNetwork {
   def main(args: Array[String]): Unit = {
-    val (pos, neg) = Util.prepareTrainingDataNoBias(1000)
+    val (pos, neg) = Util.prepareTrainingDataNoBiasAlt(500)
     val td = TrainingData(pos, neg)
-    val vectorSize = tuplize(Seq(2, 3, 11, 5, 3, 1)).map(t => (t._1 + 1) * t._2).sum
+    val vectorSize = tuplize(Seq(2,9,1)).map(t => (t._1 + 1) * t._2).sum
 
     println("V+++++"+vectorSize)
 
     val stochasticGradientDescent = StochasticGradientDescent[DenseVector[Double]](1,1000)
-    val state = stochasticGradientDescent.minimizeAndReturnState(f(td,2,Seq(3, 11, 5, 3), 1),DenseVector.rand[Double](vectorSize))
+    val state = stochasticGradientDescent.minimizeAndReturnState(f(td,2,Seq(9),1),DenseVector.rand[Double](vectorSize))
     println(state.x)
 
     val convergenceStatus = stochasticGradientDescent.convergenceCheck(state,state.convergenceInfo)
     println(convergenceStatus.get.reason)
 
-    val nn = NeuralNetwork(2,Seq(3,11,5,3),1)
+    val trainingData = Util.prependOnesColumn(td.trainingData)
+    Util.plotXY(trainingData)
+
+    scala.io.StdIn.readLine()
+
+    val nn = NeuralNetwork(2,Seq(9),1)
 
     val input = Util.prepareClassificationDataNoBias(10000)
     val output = nn.classify(input)

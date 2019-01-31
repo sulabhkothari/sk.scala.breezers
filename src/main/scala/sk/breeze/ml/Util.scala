@@ -182,22 +182,39 @@ object Util {
         })))
   }
 
+  def prepareTrainingDataNoBiasAlt(dataSize: Int): (DenseMatrix[Double], DenseMatrix[Double]) = {
+    val rg = new scala.util.Random
+    (
+      DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
+        j match {
+          case 0 => i
+          case 1 => i * rg.nextDouble + 200.99
+          case 2 => 1
+        }),
+      DenseMatrix.tabulate[Double](dataSize / 2, 3)((i, j) =>
+        j match {
+          case 0 => i - dataSize.asInstanceOf[Double] / 2
+          case 1 => (i - dataSize.asInstanceOf[Double] / 2) * rg.nextDouble + 48.49
+          case 2 => if (i - dataSize.asInstanceOf[Double] / 2 < 0) 0 else 1
+        }))
+  }
+
   def prepareTrainingDataNoBias(dataSize: Double): (DenseMatrix[Double], DenseMatrix[Double]) = {
     val rg = new scala.util.Random
 
     val posPoints = for {
-      x <- dataSize to 2 * dataSize by 1.9
-      y <- dataSize to 2 * dataSize by 1.9
+      x <- dataSize to 2 * dataSize by 11.9
+      y <- dataSize to 2 * dataSize by 11.9
     }
-      yield (x*x * rg.nextDouble() * 10, y*y * rg.nextDouble() * 10, 1.0)
+      yield (x * x * rg.nextDouble() * 10, y * y * rg.nextDouble() * 10, 1.0)
 
     val negPoints = for {
-      x <- -dataSize to 0 by 11.3
-      y <- -dataSize to 0 by 21.1
+      x <- -2 * dataSize to 0 by 1.3
+      y <- -2 * dataSize to 0 by 1.1
     }
-      yield (-x*x * rg.nextDouble() * 9, -y*y * rg.nextDouble() * 10, 0.0)
+      yield (-x * x * rg.nextDouble() * 9, -y * y * rg.nextDouble() * 10, 0.0)
 
-    (DenseMatrix(posPoints:_*), DenseMatrix(negPoints:_*))
+    (DenseMatrix(posPoints: _*), DenseMatrix(negPoints: _*))
   }
 
   def prepareTrainingData(dataSize: Int, pos: Double, neg: Double): (DenseMatrix[Double], DenseMatrix[Double]) = {

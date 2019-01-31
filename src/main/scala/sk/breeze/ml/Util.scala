@@ -187,15 +187,15 @@ object Util {
 
     val posPoints = for {
       x <- dataSize to 2 * dataSize by 1.9
-      y <- dataSize to 2 * dataSize by 2.9
+      y <- dataSize to 2 * dataSize by 1.9
     }
-      yield (x * rg.nextDouble() * 10, y * rg.nextDouble() * 10, 1.0)
+      yield (x*x * rg.nextDouble() * 10, y*y * rg.nextDouble() * 10, 1.0)
 
     val negPoints = for {
-      x <- -dataSize to 0 by 7
-      y <- -dataSize to 0 by 2
+      x <- -dataSize to 0 by 11.3
+      y <- -dataSize to 0 by 21.1
     }
-      yield (x * rg.nextDouble() * 9, y * rg.nextDouble() * 10, 0.0)
+      yield (-x*x * rg.nextDouble() * 9, -y*y * rg.nextDouble() * 10, 0.0)
 
     (DenseMatrix(posPoints:_*), DenseMatrix(negPoints:_*))
   }

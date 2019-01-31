@@ -1,6 +1,6 @@
 package sk.breeze.ml
 
-import breeze.linalg.{*, DenseMatrix, DenseVector}
+import breeze.linalg.{*, DenseMatrix, DenseVector, sum}
 import breeze.numerics.{abs, sigmoid}
 import breeze.optimize.{DiffFunction, StochasticGradientDescent}
 import sk.breeze.ml.LogisticRegression.{cost, gradient}
@@ -10,18 +10,42 @@ import scala.collection.mutable
 import scala.collection.mutable.ArraySeq
 
 object NeuralNetwork {
+
   def main(args: Array[String]): Unit = {
-    val (pos, neg) = Util.prepareTrainingDataNoBiasAlt(500)
+//    val layerWiseNeuronCount = Seq(2, 3, 1,2)
+//    val weights = DenseVector[Double](Array(1, 1, 1, 1, 1, 0.9, 0.9, 9.9, 0, 8, 0, 8, 0,7,6,7,6))
+//    var w = weights.data
+//    var init = 0
+//    val wei = tuplize(layerWiseNeuronCount)
+//      .map {
+//        case (row, col) =>
+//          println(init)
+//          println(init + (row + 1) * col - 1)
+//          w = weights.slice(init, init + (row + 1) * col).data
+//          println("N")
+//          w.foreach(print)
+//          println("E")
+//          init += (row+1) * col
+//          DenseMatrix.create[Double](row + 1, col, w)
+//      }
+//    wei.foreach(println)
+//    scala.io.StdIn.readLine()
+    val (pos, neg) = Util.prepareTrainingDataNoBiasAlt(10000)
     val td = TrainingData(pos, neg)
-    val vectorSize = tuplize(Seq(2,9,1)).map(t => (t._1 + 1) * t._2).sum
+    //val sample = DenseMatrix.create(5,1,Array(1.0,9.0,8.0,-.99,-1.01))
+    //sample.data.foreach(print)
+    //println(td.trainingData)
+    //scala.io.StdIn.readLine()
+    val layerConfig = Seq(2, 3, 5, 6, 7, 8, 6, 5, 6, 7, 8, 9, 1)
+    val vectorSize = tuplize(layerConfig).map(t => (t._1 + 1) * t._2).sum
 
-    println("V+++++"+vectorSize)
+    println("V+++++" + vectorSize)
 
-    val stochasticGradientDescent = StochasticGradientDescent[DenseVector[Double]](1,1000)
-    val state = stochasticGradientDescent.minimizeAndReturnState(f(td,2,Seq(9),1),DenseVector.rand[Double](vectorSize))
+    val stochasticGradientDescent = StochasticGradientDescent[DenseVector[Double]](1, 1000)
+    val state = stochasticGradientDescent.minimizeAndReturnState(f(td, layerConfig), DenseVector.rand[Double](vectorSize))
     println(state.x)
 
-    val convergenceStatus = stochasticGradientDescent.convergenceCheck(state,state.convergenceInfo)
+    val convergenceStatus = stochasticGradientDescent.convergenceCheck(state, state.convergenceInfo)
     println(convergenceStatus.get.reason)
 
     val trainingData = Util.prependOnesColumn(td.trainingData)
@@ -29,7 +53,7 @@ object NeuralNetwork {
 
     scala.io.StdIn.readLine()
 
-    val nn = NeuralNetwork(2,Seq(9),1)
+    val nn = NeuralNetwork(layerConfig)
 
     val input = Util.prepareClassificationDataNoBias(10000)
     val output = nn.classify(input)
@@ -39,7 +63,9 @@ object NeuralNetwork {
   }
 
   def gradientDescentNN = {
-    val nn = NeuralNetwork(2,Seq(3, 11, 5, 3), 1)
+    val layerConfig = Seq(2, 3, 5, 6, 7, 8, 6, 5, 6, 7, 8, 9, 1)
+
+    val nn = NeuralNetwork(layerConfig)
     val (pos, neg) = Util.prepareTrainingDataNoBias(100)
     println("DG")
     val td = TrainingData(pos, neg)
@@ -70,36 +96,44 @@ object NeuralNetwork {
   }
 
   val f =
-    (td: TrainingData, inputCount: Int, layerWiseNeuronCount: Seq[Int], outputCount: Int)
+    (td: TrainingData, layerWiseNeuronCount: Seq[Int])
     => new DiffFunction[DenseVector[Double]] {
       def calculate(theta: DenseVector[Double]) = {
-        val nn = NeuralNetwork(inputCount,layerWiseNeuronCount,outputCount,theta)
+        val nn = NeuralNetwork(layerWiseNeuronCount, theta)
         val y = nn.classify(td.x)
-        val expectedy = DenseMatrix.create(td.y.length, 1, td.y.data)
-        val cost = (expectedy - y).data.map(math.abs).sum
+        val expectedy = td.y.asDenseMatrix.t
+        //println(expectedy.t)
+        //expectedy..data.foreach(n=>if(n<0) print(s"($n)") else print(s"[$n]"))
+        //        println(expectedy - y)
+        //        println((expectedy - y).data.map(math.abs).sum)
+        //        println(sum(abs(expectedy - y)))
+        //        println(expectedy(9000,0))
+
+        //        scala.io.StdIn.readLine()
+        val cost = sum(abs(expectedy - y))
         val gradient = getPackedWeights(nn.gradient(td.x, expectedy))
-        (cost,gradient)
+        (cost, gradient)
       }
     }
 
-  def apply(inputCount: Int, layerWiseNeuronCount: Seq[Int], outputCount: Int): NeuralNetwork = {
-    println(tuplize(Seq(inputCount) ++ layerWiseNeuronCount ++ Seq(outputCount)))
-    val weightsArr = for ((row, col) <- tuplize(Seq(inputCount) ++ layerWiseNeuronCount ++ Seq(outputCount)))
+  def apply(layerWiseNeuronCount: Seq[Int]): NeuralNetwork = {
+    println(tuplize(layerWiseNeuronCount))
+    val weightsArr = for ((row, col) <- tuplize(layerWiseNeuronCount))
       yield DenseMatrix.rand[Double](row + 1, col)
 
     new NeuralNetwork(weightsArr, 0.000019, 0.0005)
   }
 
-  private def apply(inputCount: Int, layerWiseNeuronCount: Seq[Int], outputCount: Int, weights: DenseVector[Double]): NeuralNetwork = {
+  private def apply(layerWiseNeuronCount: Seq[Int], weights: DenseVector[Double]): NeuralNetwork = {
     var w = weights.data
     var init = 0
-    val weightsArr = tuplize(Seq(inputCount) ++ layerWiseNeuronCount ++ Seq(outputCount))
-        .map {
-          case (row,col) =>
-            w = weights.slice(init, init + (row + 1)* col - 1).data
-            init += row * col
-            DenseMatrix.create[Double](row+1, col, w)
-        }
+    val weightsArr = tuplize(layerWiseNeuronCount)
+      .map {
+        case (row, col) =>
+          w = weights.data.slice(init, init + (row + 1) * col - 1)
+          init += (row+1) * col
+          DenseMatrix.create[Double](row + 1, col, w)
+      }
 
     new NeuralNetwork(weightsArr, 0.000019, 0.0005)
   }

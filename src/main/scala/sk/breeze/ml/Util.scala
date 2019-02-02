@@ -195,7 +195,7 @@ object Util {
         j match {
           case 0 => i - dataSize.asInstanceOf[Double] / 2
           case 1 => (i - dataSize.asInstanceOf[Double] / 2) * rg.nextDouble + 48.49
-          case 2 => if (i - dataSize.asInstanceOf[Double] / 2 < 0) 0 else 1
+          case 2 => 0
         }))
   }
 

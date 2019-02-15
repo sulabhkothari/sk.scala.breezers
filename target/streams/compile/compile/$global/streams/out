@@ -1,4 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/sulabhkothari/sk.scala.breezers/src/main/scala/sk/breeze/ml/LogisticRegression.scala:21:36: could not find implicit value for parameter op: breeze.linalg.operators.OpSub.Impl2[breeze.linalg.DenseMatrix[Double],breeze.linalg.DenseVector[Double],That][0m
-[0m[[0m[31merror[0m] [0m[0m    val result = (hTheta(theta, x) - y).t * x[0m
-[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/sulabhk/IdeaProjects/sparkLr/src/main/scala/QSort.scala:46:20: match may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: Failure(_)[0m
+[0m[[0m[33mwarn[0m] [0m[0m      }.onComplete { case Success(e) => println(start + "," + (p - 1)) }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/sulabhk/IdeaProjects/sparkLr/src/main/scala/QSort.scala:49:20: match may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: Failure(_)[0m
+[0m[[0m[33mwarn[0m] [0m[0m      }.onComplete { case Success(e) => println(p + 1 + "," + end) }[0m
+[0m[[0m[33mwarn[0m] [0m[0m                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were two feature warnings; re-run with -feature for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m

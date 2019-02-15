@@ -1,6 +1,7 @@
-.xml
-.xslt
-.css
-.class
-.cache
-
+*.class
+*.log
+*.impl
+*.xml
+.idea
+project
+target

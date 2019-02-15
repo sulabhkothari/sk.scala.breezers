@@ -2,7 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03172b1d-3d3a-446d-82c4-40ca5605927b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sparkLr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/sparkLr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$299a88537a43441de38b$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$299a88537a43441de38b.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$299a88537a43441de38b.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7dc0af448028c0b8523a$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7dc0af448028c0b8523a.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7dc0af448028c0b8523a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c963630c1a331bfff299$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c963630c1a331bfff299.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c963630c1a331bfff299.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cf202ff56e35a25ab2d9$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cf202ff56e35a25ab2d9.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cf202ff56e35a25ab2d9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f4b0a9a5cbfc3d6878a2$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f4b0a9a5cbfc3d6878a2.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f4b0a9a5cbfc3d6878a2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/sparklr-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/sparklr-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/sparklr-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/sparklr-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-compile-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-compile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-optional.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-provided.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-runtime-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-runtime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-scala-tool.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-test-internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-sparklr-build-test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NNWithDl4j.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NNWithDl4j.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LogisticRegression$$anonfun$prepareClassificationSample$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LogisticRegression$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LogisticRegression$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LogisticRegression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/LogisticRegression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/NeuralNetwork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/NeuralNetwork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$isConverged$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$isConverged$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$isConverged$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$$anonfun$isConverged$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Line$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Line$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Line.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Plane$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Plane$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util$Plane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/sk/breeze/ml/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/sparklr-sparklr_2.11-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/sparklr/sparklr_2.11/0.1/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/sparklr/sparklr_2.11/0.1/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -12,6 +108,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/sparklr$NeuralNetwork.ic" NAME="NeuralNetwork Coverage Results" MODIFIED="1549089057607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sk.breeze.ml.*</FILTER>
+    </SUITE>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -28,24 +129,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
-          <entry key="scala" value="14" />
+          <entry key="class" value="3" />
+          <entry key="gitignore" value="1" />
+          <entry key="java" value="4" />
+          <entry key="sbt" value="1" />
+          <entry key="scala" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="Scala" value="14" />
+          <entry key="CLASS" value="3" />
+          <entry key="JAVA" value="4" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Scala" value="20" />
+          <entry key="sbt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="scala" value="3553" />
+          <entry key="sbt" value="6" />
+          <entry key="scala" value="8217" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Scala" value="3553" />
+          <entry key="Scala" value="8217" />
+          <entry key="sbt" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -81,48 +190,84 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1635">
-              <caret line="112" column="34" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="34" />
+            <state relative-caret-position="94">
+              <caret line="184" selection-start-line="184" selection-end-line="199" selection-end-column="3" />
               <folding>
-                <element signature="e#22#92#0" expanded="true" />
+                <element signature="e#22#72#0" expanded="true" />
+                <element signature="e#1221#2278#0" />
+                <element signature="e#1908#2002#0" />
+                <element signature="e#2338#3153#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="339">
+              <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NNWithDl4j.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="61" column="43" lean-forward="true" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
               <folding>
-                <element signature="e#22#72#0" expanded="true" />
+                <element signature="e#22#38#0" expanded="true" />
+                <element signature="e#365#415#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.deeplearning4j/deeplearning4j-nn/srcs/deeplearning4j-nn-1.0.0-beta3-sources.jar!/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="2111" column="16" selection-start-line="2111" selection-start-column="16" selection-end-line="2111" selection-end-column="16" />
               <folding>
-                <element signature="e#22#72#0" expanded="true" />
+                <element signature="e#96293#96294#0" expanded="true" />
+                <element signature="e#96338#96339#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/stats/distributions/Gaussian.scala">
+        <entry file="jar://$USER_HOME$/.ivy2/cache/org.nd4j/nd4j-api/srcs/nd4j-api-1.0.0-beta3-sources.jar!/org/nd4j/linalg/api/ndarray/INDArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="-2777">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetwork.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+              <folding>
+                <element signature="e#22#77#0" expanded="true" />
+                <element signature="e#452#486#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,16 +276,31 @@
         <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/NumericOps.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.sbt">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetworkTests.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="343">
+              <caret line="73" column="3" lean-forward="true" selection-start-line="73" selection-start-column="3" selection-end-line="73" selection-end-column="3" />
+              <folding>
+                <element signature="e#22#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="55" selection-start-line="55" selection-end-line="56" />
+              <folding>
+                <element signature="e#22#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,8 +323,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetworkTests.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetwork.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NNWithDl4j.scala" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -183,43 +348,52 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="sparkLr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk.scala.breezers" type="462c0819:PsiDirectoryNode" />
+              <item name="sparklr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sparkLr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sparkLr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk.scala.breezers" type="462c0819:PsiDirectoryNode" />
+              <item name="sparklr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sparkLr" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sparkLr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk.scala.breezers" type="462c0819:PsiDirectoryNode" />
+              <item name="sparklr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sparkLr" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sparkLr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sk.scala.breezers" type="462c0819:PsiDirectoryNode" />
+              <item name="sparklr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sparkLr" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sparklr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sparkLr" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="ml" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="build&#9;FILE&#9;file:///Users/sulabhk/IdeaProjects/sparkLr/build.sbt" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548144924052" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550250221484" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
   </component>
   <component name="RunDashboard">
@@ -234,15 +408,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LogisticRegression">
+  <component name="RunManager" selected="Application.NNWithDl4j">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinearRegression" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="sk.breeze.ml.LinearRegression" />
+    <configuration name="NNWithDl4j" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sk.breeze.ml.NNWithDl4j" />
       <module name="sparkLr" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -255,8 +429,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogisticRegression" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="sk.breeze.ml.LogisticRegression" />
+    <configuration name="NeuralNetwork" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="sk.breeze.ml.NeuralNetwork" />
       <module name="sparkLr" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -281,6 +455,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NeuralNetworkTests.NN Deltas" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="sparkLr" />
+      <setting name="path" value="sk.breeze.ml.NeuralNetworkTests" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Test name" />
+      <setting name="path" value="sk.breeze.ml.NeuralNetworkTests" />
+      <setting name="testName" value="NN Deltas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NeuralNetworkTests.NN gradient" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="sparkLr" />
+      <setting name="path" value="sk.breeze.ml.NeuralNetworkTests" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Test name" />
+      <setting name="path" value="sk.breeze.ml.NeuralNetworkTests" />
+      <setting name="testName" value="NN gradient" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NeuralNetworkTests.split resultant" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <module name="sparkLr" />
+      <setting name="path" value="sk.breeze.ml.NeuralNetworkTests" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <envs />
+      <setting name="testKind" value="Test name" />
+      <setting name="path" value="sk.breeze.ml.NeuralNetworkTests" />
+      <setting name="testName" value="split resultant" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
@@ -299,13 +527,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.LinearRegression" />
-      <item itemvalue="Application.LogisticRegression" />
+      <item itemvalue="Application.NeuralNetwork" />
+      <item itemvalue="ScalaTest.NeuralNetworkTests.NN gradient" />
+      <item itemvalue="ScalaTest.NeuralNetworkTests.NN Deltas" />
+      <item itemvalue="ScalaTest.NeuralNetworkTests.split resultant" />
+      <item itemvalue="Application.NNWithDl4j" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LogisticRegression" />
-        <item itemvalue="Application.LinearRegression" />
+        <item itemvalue="Application.NNWithDl4j" />
+        <item itemvalue="Application.NeuralNetwork" />
+        <item itemvalue="ScalaTest.NeuralNetworkTests.split resultant" />
+        <item itemvalue="ScalaTest.NeuralNetworkTests.NN Deltas" />
+        <item itemvalue="ScalaTest.NeuralNetworkTests.NN gradient" />
       </list>
     </recent_temporary>
   </component>
@@ -322,11 +556,11 @@
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="sk-scala-breezers [file:/Users/sulabhkothari/sk.scala.breezers/]" />
+                <option name="name" value="sparklr [file:/Users/sulabhk/IdeaProjects/sparkLr/]" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value="sk-scala-breezers-build [file:/Users/sulabhkothari/sk.scala.breezers/]" />
+                <option name="name" value="sparklr-build [file:/Users/sulabhk/IdeaProjects/sparkLr/]" />
                 <option name="path" value="$PROJECT_DIR$/project" />
               </ExternalProjectPojo>
             </list>
@@ -336,7 +570,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/build.sbt" value="986648341" />
+        <entry key="$PROJECT_DIR$" value="3075400332000" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="953572419" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="3858275937" />
       </map>
     </option>
@@ -355,6 +590,38 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="NeuralNetworkTests_NN_Deltas - 2019.02.02 at 10h 56m 32s.xml">
+      <configuration name="NeuralNetworkTests.NN Deltas" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_NN_Deltas - 2019.02.02 at 10h 56m 48s.xml">
+      <configuration name="NeuralNetworkTests.NN Deltas" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_NN_Deltas - 2019.02.02 at 11h 08m 40s.xml">
+      <configuration name="NeuralNetworkTests.NN Deltas" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_NN_Deltas - 2019.02.02 at 11h 09m 23s.xml">
+      <configuration name="NeuralNetworkTests.NN Deltas" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_NN_Deltas - 2019.02.02 at 11h 09m 54s.xml">
+      <configuration name="NeuralNetworkTests.NN Deltas" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_NN_Deltas - 2019.02.02 at 11h 12m 01s.xml">
+      <configuration name="NeuralNetworkTests.NN Deltas" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_NN_Deltas - 2019.02.02 at 11h 12m 21s.xml">
+      <configuration name="NeuralNetworkTests.NN Deltas" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_split_resultant - 2019.02.02 at 11h 39m 56s.xml">
+      <configuration name="NeuralNetworkTests.split resultant" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_split_resultant - 2019.02.02 at 11h 41m 42s.xml">
+      <configuration name="NeuralNetworkTests.split resultant" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="NeuralNetworkTests_split_resultant - 2019.02.02 at 11h 45m 30s.xml">
+      <configuration name="NeuralNetworkTests.split resultant" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1066000" />
   </component>
@@ -362,30 +629,28 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24034335" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23748212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32810616" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.31121832" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" weight="0.3293124" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32810616" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32771084" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -396,6 +661,8 @@
       <window_info anchor="right" id="Gradle" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Database" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,13 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetwork.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -435,18 +695,23 @@
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/collection/TraversableLike.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="169">
           <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar!/breeze/linalg/DenseMatrix.class" />
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/DenseMatrix.scala" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar!/breeze/linalg/BroadcastedColumns.class" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/Broadcasted.scala" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/optimize/DiffFunction.scala" />
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/generic/UFunc.scala" />
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/numerics/package.scala" />
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/numerics/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="329" column="9" selection-start-line="329" selection-start-column="9" selection-end-line="329" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LinearRegression.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1635">
@@ -457,30 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#22#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/NumericOps.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/stats/distributions/Gaussian.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -488,13 +729,176 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/ConvexOptimization.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#22#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/collection/IterableLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/math/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/SupportVectorMachine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding>
             <element signature="e#22#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar!/breeze/linalg/DenseVector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="119" selection-start-line="2" selection-start-column="119" selection-end-line="2" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.12.jar!/scala/runtime/Tuple2Zipped.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/Tuple1.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/DenseVector.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/DenseMatrix.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="361" column="6" selection-start-line="361" selection-start-column="6" selection-end-line="361" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.deeplearning4j/deeplearning4j-datavec-iterators/srcs/deeplearning4j-datavec-iterators-1.0.0-beta3-sources.jar!/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="916">
+          <caret line="131" column="11" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.nd4j/nd4j-api/srcs/nd4j-api-1.0.0-beta3-sources.jar!/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-812">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetworkTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="73" column="3" lean-forward="true" selection-start-line="73" selection-start-column="3" selection-end-line="73" selection-end-column="3" />
+          <folding>
+            <element signature="e#22#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/LogisticRegression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="55" selection-start-line="55" selection-end-line="56" />
+          <folding>
+            <element signature="e#22#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scalanlp/breeze_2.11/srcs/breeze_2.11-0.12-sources.jar!/breeze/linalg/NumericOps.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NeuralNetwork.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+          <folding>
+            <element signature="e#22#77#0" expanded="true" />
+            <element signature="e#452#486#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.nd4j/nd4j-api/srcs/nd4j-api-1.0.0-beta3-sources.jar!/org/nd4j/linalg/api/ndarray/INDArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2777">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.deeplearning4j/deeplearning4j-nn/srcs/deeplearning4j-nn-1.0.0-beta3-sources.jar!/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="2111" column="16" selection-start-line="2111" selection-start-column="16" selection-end-line="2111" selection-end-column="16" />
+          <folding>
+            <element signature="e#96293#96294#0" expanded="true" />
+            <element signature="e#96338#96339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/Util.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="184" selection-start-line="184" selection-end-line="199" selection-end-column="3" />
+          <folding>
+            <element signature="e#22#72#0" expanded="true" />
+            <element signature="e#1221#2278#0" />
+            <element signature="e#1908#2002#0" />
+            <element signature="e#2338#3153#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/sk/breeze/ml/NNWithDl4j.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="61" column="43" lean-forward="true" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+          <folding>
+            <element signature="e#22#38#0" expanded="true" />
+            <element signature="e#365#415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
